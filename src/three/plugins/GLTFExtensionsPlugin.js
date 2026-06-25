@@ -1,6 +1,7 @@
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { GLTFStructuralMetadataExtension } from './gltf/GLTFStructuralMetadataExtension.js';
 import { GLTFMeshFeaturesExtension } from './gltf/GLTFMeshFeaturesExtension.js';
+import { GLTFInstanceFeaturesExtension } from './gltf/GLTFInstanceFeaturesExtension.js';
 import { GLTFCesiumRTCExtension } from './gltf/GLTFCesiumRTCExtension.js';
 
 /**
@@ -8,7 +9,7 @@ import { GLTFCesiumRTCExtension } from './gltf/GLTFCesiumRTCExtension.js';
  * `GLTFLoader` used for parsing tile geometry. A `DRACOLoader` can be provided to
  * support loading Draco-compressed point cloud files.
  * @param {Object} [options]
- * @param {boolean} [options.metadata=true] Enable the `EXT_structural_metadata` and `EXT_mesh_features` extensions.
+ * @param {boolean} [options.metadata=true] Enable the `EXT_structural_metadata`, `EXT_mesh_features`, and `EXT_instance_features` extensions.
  * @param {boolean} [options.rtc=true] Enable the `CESIUM_RTC` extension.
  * @param {Array} [options.plugins=[]] Additional GLTF loader plugins to pass to `GLTFLoader.register`.
  * @param {Object} [options.dracoLoader=null] A `DRACOLoader` instance for Draco-compressed geometry.
@@ -80,6 +81,7 @@ export class GLTFExtensionsPlugin {
 
 			loader.register( () => new GLTFStructuralMetadataExtension() );
 			loader.register( () => new GLTFMeshFeaturesExtension() );
+			loader.register( () => new GLTFInstanceFeaturesExtension() );
 
 		}
 

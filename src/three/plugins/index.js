@@ -22,9 +22,11 @@ export * from './images/MVTOverlay.js';
 export * from './gltf/GLTFCesiumRTCExtension.js';
 export * from './gltf/GLTFStructuralMetadataExtension.js';
 export * from './gltf/GLTFMeshFeaturesExtension.js';
+export * from './gltf/GLTFInstanceFeaturesExtension.js';
 
 // gltf metadata classes
 export * from './gltf/metadata/classes/MeshFeatures.js';
+export * from './gltf/metadata/classes/InstanceFeatures.js';
 export * from './gltf/metadata/classes/StructuralMetadata.js';
 
 // mvt utilities

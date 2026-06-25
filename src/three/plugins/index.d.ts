@@ -19,6 +19,7 @@ export * from './mvt/MVTAnnotationsPlugin.js';
 export * from './gltf/GLTFCesiumRTCExtension.js';
 export * from './gltf/GLTFStructuralMetadataExtension.js';
 export * from './gltf/GLTFMeshFeaturesExtension.js';
+export * from './gltf/GLTFInstanceFeaturesExtension.js';
 
 // mvt utilities
 export * from './mvt/GlyphAtlasTexture.js';
